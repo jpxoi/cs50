@@ -14,3 +14,6 @@
 *.su
 *.idb
 *.pdb
+
+# Folders
+wiki/
