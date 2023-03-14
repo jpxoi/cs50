@@ -11,12 +11,12 @@ int main(int argc, string argv[])
     if (argc < 2) // if no command-line arguments are provided
     {
         printf("Missing command-line argument\n");
-        return 1; // exit program with error code 1
+        return 1;
     }
     else if (argc > 2) // if more than one command-line argument is provided
     {
         printf("Too many command-line arguments\n");
-        return 1; // exit program with error code 1
+        return 1;
     }
 
     // Call replace function and print the resulting string
