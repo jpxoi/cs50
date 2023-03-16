@@ -34,7 +34,7 @@ int main(int argc, string argv[])
     // Print the header for the ciphertext
     printf("ciphertext: ");
 
-    // Rotate eacg character by k and print the rotated character
+    // Rotate each character by k and print the rotated character
     for (int i = 0; i < strlen(plaintext); i++)
     {
         char new_char = rotate(plaintext[i], k);
