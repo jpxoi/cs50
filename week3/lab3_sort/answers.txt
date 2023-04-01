@@ -1,0 +1,11 @@
+sort1 uses: Bubble Sort
+
+How do you know?: By knowing that sort2 uses Merge Sort, and sort3 uses Selection Sort, it is possible to deduce that sort1 uses Bubble Sort.
+
+sort2 uses: Merge Sort
+
+How do you know?: I compared the efficiency of three sorting algorithms: sort1, sort2, and sort3. I measured the time it took for each algorithm to sort three randomized lists with 5000, 10000, and 50000 elements. Then, I plotted the results in a scattered graph and drew trendlines for each sorting method. My results show that the most efficient algorithm for larger unsorted lists was sort2. Therefore, it is Merge Sort.
+
+sort3 uses: Selection Sort
+
+How do you know?: I conducted an experiment to compare the efficiency of three sorting algorithms: sort1, sort2, and sort3, on sorted lists. I measured the time it took for each algorithm to sort three sorted lists with 5000, 10000, and 50000 elements. I then plotted the results in a scattered graph and drew trendlines for each sorting method. The results of the experiment showed that the least efficient algorithm for a sorted list was sort3. This indicates that sort3 is most likely the Selection Sort method. This is because we already know that sort2 is Merge Sort and sort1 showed similar results as sort2 method, which meant it could recognize a sorted list and be more efficient with them.
