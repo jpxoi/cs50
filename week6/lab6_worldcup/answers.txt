@@ -1,0 +1,30 @@
+Times:
+
+10 simulations: 0m0.027s
+100 simulations: 0m0.028s
+1000 simulations: 0m0.035s
+10000 simulations: 0m0.134s
+100000 simulations: 0m0.835s
+1000000 simulations: 0m7.478s
+
+Questions:
+
+Which predictions, if any, proved incorrect as you increased the number of simulations?:
+The lowest probability of winning changed a lot after running certain simulations. Specially the following:
+
+France: 2.0% chance of winning
+England: 2.0% chance of winning
+Sweden: 1.0% chance of winning
+Colombia: 1.0% chance of winning
+Uruguay: 1.0% chance of winning
+
+Changed to:
+France: 3.4% chance of winning
+England: 2.8% chance of winning
+Sweden: 0.5% chance of winning
+Colombia: 1.6% chance of winning
+Uruguay: 0.5% chance of winning
+
+Suppose you're charged a fee for each second of compute time your program uses.
+After how many simulations would you call the predictions "good enough"?:
+After 100000 simulations there is enough data to get an accurate prediction.
