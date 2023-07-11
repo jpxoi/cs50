@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+
+<html lang="en">
+    <head>
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap" rel="stylesheet">
+        <link href="styles.css" rel="stylesheet">
+        <title>Trivia!</title>
+        <script>
+            document.addEventListener('DOMContentLoaded', function() {
+                // Variables
+                let correct = document.querySelector('.correct')
+                let incorrect = document.querySelectorAll('.incorrect')
+                let input = document.querySelector('input');
+                let checker = document.querySelector('#check')
+                let answer1 = document.querySelector('#answer1')
+                let answer2 = document.querySelector('#answer2')
+
+                // When answer is correct, the button will turn green
+                correct.addEventListener('click', function() {
+                    correct.style.backgroundColor = 'green'
+                    correct.style.color = 'white'
+                    answer1.innerHTML = 'Correct!'
+                    answer1.style.color = 'green'
+
+                    for (let i = 0; i < incorrect.length; i++) {
+                        incorrect[i].disabled = true
+                    }
+                })
+
+                // When any incorrect answer is clicked, the button will turn red
+                for (let i = 0; i < incorrect.length; i++) {
+                    incorrect[i].addEventListener('click', function() {
+                        incorrect[i].style.backgroundColor = 'red'
+                        incorrect[i].style.color = 'white'
+                        answer1.innerHTML = 'Incorrect!'
+                        answer1.style.color = 'red'
+
+                        correct.disabled = true
+
+                        for (let j = 0; j < incorrect.length; j++) {
+                        incorrect[j].disabled = true
+                        }
+                    })
+                }
+
+                // Check free responde submision
+                checker.addEventListener('click', function() {
+                    if (input.value.toLowerCase() == 'asia') {
+                        input.style.backgroundColor = 'green'
+                        input.style.color = 'white'
+                        answer2.innerHTML = 'Correct!'
+                        answer2.style.color = 'green'
+                    } else {
+                        input.style.backgroundColor = 'red'
+                        input.style.color = 'white'
+                        answer2.innerHTML = 'Incorrect!'
+                        answer2.style.color = 'red'
+                    }
+                })
+            })
+        </script>
+    </head>
+    <body>
+        <div class="header">
+            <h1>Trivia!</h1>
+        </div>
+
+        <div class="container">
+            <div class="section">
+                <h2>Part 1: Multiple Choice </h2>
+                <hr>
+                <!-- TODO: Add multiple choice question here -->
+                <h3>In which museum can you find Leonardo Da Vinci's Mona Lisa?</h3>
+
+                <button type='text' class="incorrect">Uffizi Museum</button>
+                <button type='text' class="incorrect">British Museum</button>
+                <button type='text' class="incorrect">Metropolitan Museum of Art</button>
+                <button type='text' class="correct">Le Louvre</button>
+                <button type='text' class="incorrect">American Museum of Natural History</button>
+
+                <p id="answer1"></p>
+            </div>
+
+            <div class="section">
+                <h2>Part 2: Free Response</h2>
+                <hr>
+                <!-- TODO: Add free response question here -->
+                <h3>What is the largest continent in size?</h3>
+                <form>
+                    <input type="text" placeholder="Continent">
+                    <button id="check">Check Answer</button>
+
+                    <p id="answer2"></p>
+                </form>
+            </div>
+            <div class="section">
+                <button id="reload" onClick="window.location.reload();">Reload</button>
+            </div>
+        </div>
+    </body>
+</html>
